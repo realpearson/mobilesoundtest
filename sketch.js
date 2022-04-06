@@ -9,7 +9,7 @@ let selected = null;
 function setup() {
   createCanvas(400, 400);
   
-  }
+ 
 
 
 }
@@ -53,6 +53,7 @@ function touchStarted() {
             size: 50,
           })
         );
+      }
   }
   
   for (let sn of snodes) {
