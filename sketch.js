@@ -7,7 +7,7 @@ window.addEventListener('touchstart', async ()=> {
 }, {once : true});
 
 
-let numNodes = 1;
+let numNodes = 5;
 let snodes = [];
 let started = false;
 
@@ -50,7 +50,7 @@ function touchStarted() {
           })
         );
       }
-      /*
+      
       for (let i = 0; i < 3; i++) {
         snodes.push(
           new springNode({
@@ -62,7 +62,7 @@ function touchStarted() {
           })
         );
       }
-      */
+      
   }
   
   for (let sn of snodes) {
@@ -247,6 +247,7 @@ function filterBank() {
   };
 
   this.setLevel = function (_level, _time) {
+    inputGain.gain.cancelScheduledValues(0);
     const t = _time || 0.05;
     inputGain.gain.rampTo(_level, t);
   };
