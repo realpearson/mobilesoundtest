@@ -1,3 +1,12 @@
+window.addEventListener('click', async ()=> {
+  await Tone.start();
+}, {once : true});
+
+window.addEventListener('touchstart', async ()=> {
+  await Tone.start();
+}, {once : true});
+
+
 let numNodes = 5;
 let snodes = [];
 let started = false;
