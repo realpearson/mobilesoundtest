@@ -39,7 +39,6 @@ function draw() {
 function touchStarted() {
   
   if(!started){
-    Tone.start(0);
     started = true;
     
      for (let i = 0; i < numNodes; i++) {
