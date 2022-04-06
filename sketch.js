@@ -9,31 +9,6 @@ let selected = null;
 function setup() {
   createCanvas(400, 400);
   
-  
-  
-  
-
-
-  for (let i = 0; i < numNodes; i++) {
-    snodes.push(
-      new springNode({
-        posX: random(width),
-        posY: random(height / 2),
-        isAnchored: true,
-      })
-    );
-  }
-
-  for (let i = 0; i < 3; i++) {
-    snodes.push(
-      new springNode({
-        posX: random(width),
-        posY: random(height),
-        fillCol: { r: 220, g: 90, b: 30 },
-        strokeCol: { r: 50, g: 189, b: 200 },
-        size: 50,
-      })
-    );
   }
 
 
@@ -57,6 +32,27 @@ function touchStarted() {
   if(!started){
     Tone.start(0);
     started = true;
+    
+     for (let i = 0; i < numNodes; i++) {
+        snodes.push(
+          new springNode({
+            posX: random(width),
+            posY: random(height / 2),
+            isAnchored: true,
+          })
+        );
+      }
+
+      for (let i = 0; i < 3; i++) {
+        snodes.push(
+          new springNode({
+            posX: random(width),
+            posY: random(height),
+            fillCol: { r: 220, g: 90, b: 30 },
+            strokeCol: { r: 50, g: 189, b: 200 },
+            size: 50,
+          })
+        );
   }
   
   for (let sn of snodes) {
