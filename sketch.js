@@ -7,7 +7,7 @@ window.addEventListener('touchstart', async ()=> {
 }, {once : true});
 
 
-let numNodes = 4;
+let numNodes = 6;
 let snodes = [];
 let started = false;
 
