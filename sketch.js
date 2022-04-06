@@ -7,7 +7,7 @@ window.addEventListener('touchstart', async ()=> {
 }, {once : true});
 
 
-let numNodes = 5;
+let numNodes = 1;
 let snodes = [];
 let started = false;
 
@@ -51,7 +51,7 @@ function touchStarted() {
           })
         );
       }
-
+      /*
       for (let i = 0; i < 3; i++) {
         snodes.push(
           new springNode({
@@ -63,6 +63,7 @@ function touchStarted() {
           })
         );
       }
+      */
   }
   
   for (let sn of snodes) {
