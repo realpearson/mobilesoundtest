@@ -1,6 +1,6 @@
 let numNodes = 5;
 let snodes = [];
-let flyer;
+let started = false;
 
 let noice = new noiseSource();
 
@@ -12,7 +12,7 @@ function setup() {
   
   
   
-  
+
 
   for (let i = 0; i < numNodes; i++) {
     snodes.push(
@@ -36,6 +36,7 @@ function setup() {
     );
   }
 
+
 }
 
 function draw() {
@@ -52,6 +53,12 @@ function draw() {
 
 
 function touchStarted() {
+  
+  if(!started){
+    Tone.start(0);
+    started = true;
+  }
+  
   for (let sn of snodes) {
     if (sn.checkCollide(mouseX, mouseY, 40)) {
       //select object
